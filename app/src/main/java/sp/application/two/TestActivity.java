@@ -15,7 +15,7 @@ public class TestActivity extends AppCompatActivity {
 //        EdgeToEdge.enable(this);
         setContentView(R.layout.activity_test);
 
-        com.cisco.anyconnect.broadcasts.data.Static.getGlobalData().setMainApplication(this.getApplication());
+        com.cisco.anyconnect.broadcasts.data.Static.setGlobalData(this);
 
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
             Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());

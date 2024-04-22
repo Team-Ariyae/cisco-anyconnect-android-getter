@@ -1,22 +1,22 @@
 package com.cisco.anyconnect.broadcasts.data;
 
-import android.app.Activity;
+import android.content.Context;
 
 import androidx.annotation.NonNull;
 
 // I need some object ;-)
 public class Global extends GlobalHelper {
-    public Global(Activity context) {
+    public Global(Context context) {
         setMainApplication(context);
     }
 
     @NonNull
-    public Activity getMainApplication() {
+    public Context getMainApplication() {
         assert this.mainApplication != null;
         return this.mainApplication;
     }
 
-    public void setMainApplication(@NonNull Activity mainApplication) {
+    public void setMainApplication(@NonNull Context mainApplication) {
         this.mainApplication = mainApplication;
     }
 

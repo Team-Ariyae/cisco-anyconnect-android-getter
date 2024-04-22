@@ -6,6 +6,8 @@ import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.cisco.anyconnect.broadcasts.data.GlobalHelper;
+
 public class MainActivity extends AppCompatActivity {
 
     @Override
@@ -14,12 +16,12 @@ public class MainActivity extends AppCompatActivity {
 
         try {
             Intent startIntent = new Intent();
-            startIntent.setAction(Data.ACTION);
+            startIntent.setAction(GlobalHelper.ACTION);
             startIntent.setPackage("sp.application.two");
             startIntent.addFlags(Intent.FLAG_INCLUDE_STOPPED_PACKAGES);
             Toast.makeText(this, "SENDED!", Toast.LENGTH_SHORT).show();
 
-            startIntent.putExtra(Data.EXTRA_MESSAGE_TYPE, Data.MESSAGE_START);
+            startIntent.putExtra(GlobalHelper.EXTRA_MESSAGE_TYPE, GlobalHelper.MESSAGE_START);
 
             getApplicationContext().sendBroadcast(startIntent, "sp.cisco.permission.GETTER_INTENT");
         } catch (Exception e) {
