@@ -1,7 +1,6 @@
-package sp.application.two.broadcasts.data;
+package com.cisco.anyconnect.broadcasts.data;
 
 import android.app.Activity;
-import android.app.Application;
 
 import androidx.annotation.Nullable;
 

@@ -1,4 +1,4 @@
-package sp.application.two.broadcasts;
+package com.cisco.anyconnect.broadcasts;
 
 import android.content.BroadcastReceiver;
 import android.content.Context;
@@ -8,7 +8,6 @@ import android.widget.Toast;
 
 import sp.application.two.TestActivity;
 import sp.application.two.broadcasts.data.GlobalHelper;
-import sp.application.two.broadcasts.data.Static;
 
 public class ReceiverGetter extends BroadcastReceiver {
 
