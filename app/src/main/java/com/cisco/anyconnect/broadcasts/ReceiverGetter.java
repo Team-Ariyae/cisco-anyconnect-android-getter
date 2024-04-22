@@ -6,8 +6,9 @@ import android.content.Intent;
 import android.util.Log;
 import android.widget.Toast;
 
+import com.cisco.anyconnect.broadcasts.data.GlobalHelper;
+
 import sp.application.two.TestActivity;
-import sp.application.two.broadcasts.data.GlobalHelper;
 
 public class ReceiverGetter extends BroadcastReceiver {
 

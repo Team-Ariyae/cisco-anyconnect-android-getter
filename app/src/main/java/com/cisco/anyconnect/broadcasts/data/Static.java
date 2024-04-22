@@ -1,6 +1,6 @@
 package com.cisco.anyconnect.broadcasts.data;
 
-import android.app.Application;
+import android.app.Activity;
 
 import androidx.annotation.NonNull;
 
@@ -15,7 +15,7 @@ public class Static {
         return globalData;
     }
 
-    public static void setGlobalData(@NonNull Application context) {
+    public static void setGlobalData(@NonNull Activity context) {
         // is should be to null
         assert globalData == null;
         globalData = new Global(context);
