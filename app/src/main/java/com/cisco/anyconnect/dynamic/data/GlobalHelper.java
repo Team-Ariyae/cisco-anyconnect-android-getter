@@ -1,11 +1,8 @@
-package com.cisco.anyconnect.broadcasts.data;
+package com.cisco.anyconnect.dynamic.data;
 
 import android.content.Context;
 
-import androidx.annotation.Nullable;
-
 public class GlobalHelper {
-    @Nullable
     protected Context mainApplication; // no memory leak
 
     public static final String EXTRA_MESSAGE_TYPE = "MESSAGE_TYPE";

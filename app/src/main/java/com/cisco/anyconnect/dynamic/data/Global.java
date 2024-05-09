@@ -1,4 +1,4 @@
-package com.cisco.anyconnect.broadcasts.data;
+package com.cisco.anyconnect.dynamic.data;
 
 import android.content.Context;
 
@@ -10,9 +10,7 @@ public class Global extends GlobalHelper {
         setMainApplication(context);
     }
 
-    @NonNull
     public Context getMainApplication() {
-        assert this.mainApplication != null;
         return this.mainApplication;
     }
 

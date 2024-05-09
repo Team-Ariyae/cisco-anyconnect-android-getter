@@ -2,11 +2,8 @@ package sp.application.two;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
-
-import com.cisco.anyconnect.broadcasts.data.GlobalHelper;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -14,19 +11,19 @@ public class MainActivity extends AppCompatActivity {
     protected void onResume() {
         super.onResume();
 
-        try {
-            Intent startIntent = new Intent();
-            startIntent.setAction(GlobalHelper.ACTION);
-            startIntent.setPackage("sp.application.two");
-            startIntent.addFlags(Intent.FLAG_INCLUDE_STOPPED_PACKAGES);
-            Toast.makeText(this, "SENDED!", Toast.LENGTH_SHORT).show();
-
-            startIntent.putExtra(GlobalHelper.EXTRA_MESSAGE_TYPE, GlobalHelper.MESSAGE_START);
-
-            getApplicationContext().sendBroadcast(startIntent, "sp.cisco.permission.GETTER_INTENT");
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
+//        try {
+//            Intent startIntent = new Intent();
+//            startIntent.setAction(GlobalHelper.ACTION);
+//            startIntent.setPackage("sp.application.two");
+//            startIntent.addFlags(Intent.FLAG_INCLUDE_STOPPED_PACKAGES);
+//            Toast.makeText(this, "SENDED!", Toast.LENGTH_SHORT).show();
+//
+//            startIntent.putExtra(GlobalHelper.EXTRA_MESSAGE_TYPE, GlobalHelper.MESSAGE_START);
+//
+//            getApplicationContext().sendBroadcast(startIntent, "sp.cisco.permission.GETTER_INTENT");
+//        } catch (Exception e) {
+//            e.printStackTrace();
+//        }
         //            Intent intent = new Intent();
 //            intent.setComponent(
 //                    new ComponentName("com.cisco.anyconnect.vpn.android.avf",
@@ -77,16 +74,25 @@ public class MainActivity extends AppCompatActivity {
 //        } catch (Exception e) {
 //            Log.d("ERR", e.toString());
 //        }
+
     }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 //        setContentView(R.layout.activity_main);
-//        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
-//            Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
-//            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
-//            return insets;
-//        });
+
+//        Intent intent = new Intent();
+//        intent.setComponent(
+//                new ComponentName("com.cisco.anyconnect.vpn.android.avf",
+//                        "com.cisco.anyconnect.ui.PrimaryActivity"));
+//        startActivity(intent);
+
+        Intent intent = new Intent(this, TestActivity.class);
+
+        intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+
+        startActivity(intent);
+
     }
 }
